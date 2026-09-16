@@ -433,6 +433,10 @@ a {
 }
 
 
+
+
+
+
 /* ==========================================================
    SEÇÕES
    ========================================================== */
@@ -1179,7 +1183,7 @@ a {
 
     text-align: center;
 
-    border-bottom: 1px solid var(--cinza-claro);
+    border-bottom: 4px solid var(--cinza-claro);
 }
 
 
@@ -1665,8 +1669,10 @@ a {
 .titulo-servicos {
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px 30px 50px;
+    padding: 60px 30px 65px;
     text-align: center;
+    border-bottom: 1px solid
+    var(--cinza);
 }
 
 .titulo-servicos span {
@@ -1721,7 +1727,7 @@ a {
 
 .servico-imagem {
     width: 100%;
-    height: 420px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -1828,6 +1834,11 @@ a {
 ===================================================== */
 
 @media (max-width: 768px) {
+    .titulo-servicos{
+        padding-bottom: 65px;
+        border-bottom: 1px solid
+        var(--cinza-claro);
+    }
 
     /* Cabeçalho menor no celular */
     .header {
@@ -1890,7 +1901,8 @@ a {
 
     /* Imagem */
     .servico-imagem {
-        height: 250px;
+    height: auto;
+    min-height: 100%;
     }
 
 
@@ -1915,6 +1927,9 @@ a {
 
     .servico-contato h2 {
         font-size: 26px;
+    }
+    .servico-texto h2.titulo-menor{
+        font-size: 22px;
     }
 
 }
@@ -2441,6 +2456,135 @@ a {
     .portfolio-topo .voltar-inicio {
         margin-bottom: 25px;
         font-size: 8px;
+    }
+
+}
+
+/* ==========================================================
+   BOTÃO SOLICITAR ATENDIMENTO - PORTFÓLIO
+   ========================================================== */
+
+.portfolio-atendimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 6% 35px;
+}
+
+.portfolio-atendimento a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 28px;
+
+    background-color: var(--laranja);
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 2px;
+
+    animation: pulsarAtendimento 2.2s infinite;
+    overflow: hidden;
+    box-shadow: 0 0 0 rgba(247,94,0,0.6);
+}
+
+@keyframes pulsarAtendimento {
+
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(247,94,0,0.5);
+    }
+
+    50% {
+        transform: scale(1.04);
+        box-shadow: 0 0 18px 4px rgba(247,94,0,0.25);
+    }
+
+
+}
+
+.portfolio-atendimento a::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.45),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: brilhoAtendimento 3.5s infinite;
+}
+
+@keyframes brilhoAtendimento {
+
+    0%, 55% {
+        left: -100%;
+    }
+
+    75%, 100% {
+        left: 130%;
+    }
+
+}
+
+/* =====================================================
+   ACABAMENTO - TOPO DA PÁGINA DE SERVIÇOS
+===================================================== */
+
+.titulo-servicos {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+/* pequeno detalhe laranja */
+.titulo-servicos::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: var(--laranja);
+    margin: 28px auto 0;
+}
+
+/* linha de divisão antes dos serviços */
+.lista-servicos {
+    border-top: 1px solid var(--cinza-claro);
+}
+
+
+/* =====================================================
+   AJUSTE SOMENTE PARA CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .titulo-servicos {
+        padding-top: 30px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .titulo-servicos::after {
+        width: 35px;
+        height: 2px;
+        margin-top: 22px;
     }
 
 }
