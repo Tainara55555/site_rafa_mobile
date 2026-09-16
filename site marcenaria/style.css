@@ -1,0 +1,2446 @@
+/* ==========================================================
+   CORES DA RAFA MOBILE
+   ========================================================== */
+
+:root {
+
+    /* Laranja da marcenaria */
+    --laranja: #F75E00;
+
+    /* Cinza */
+    --cinza: #737373;
+
+    /* Marrom */
+    --marrom: #544844;
+
+    /* Preto */
+    --preto: #000000;
+
+    /* Branco */
+    --branco: #FFFFFF;
+
+    /* Fundo levemente acinzentado */
+    --fundo: #F7F6F4;
+
+    /* Cinza bem claro */
+    --cinza-claro: #E8E6E3;
+
+    /*Fundo claro do portifolio*/
+    --fundo-claro: #F2F2F2;
+}
+
+
+/* ==========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================== */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Rolagem suave quando clicar nos links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Corpo do site */
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--preto);
+
+    background: var(--branco);
+
+    line-height: 1.6;
+}
+
+
+/* Tira o sublinhado dos links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==========================================================
+   FAIXA LARANJA DO TOPO
+   ========================================================== */
+
+.top-bar {
+
+    height: 10px;
+
+    background-color: #F75E00;
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
+
+.header {
+
+    min-height: 95px;
+
+    padding: 12px 6%;
+
+    background-color: var(--preto);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.20);
+}
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.logo {
+
+    margin-right: auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.logo img {
+
+    width: 200px;
+
+    max-height: 72px;
+
+    object-fit: contain;
+}
+/* Área que junta a logo + Instagram */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Ícone do Instagram */
+.instagram {
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid var(--branco);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* Desenho do Instagram */
+.instagram-icone {
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* Efeito quando passar o mouse */
+.instagram:hover {
+    color: var(--laranja);
+    border-color: var(--laranja);
+}
+
+
+/* ==========================================================
+   MENU
+   ========================================================== */
+
+.menu {
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+
+.menu a {
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    padding: 10px 0;
+
+    position: relative;
+}
+
+
+/* Linha laranja abaixo do menu */
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 2px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: var(--laranja);
+
+    transition: 0.3s;
+}
+
+
+/* Quando passar o mouse */
+
+.menu a:hover::after {
+
+    width: 100%;
+}
+
+
+/* Página atual */
+
+.menu a.ativo::after {
+
+    width: 100%;
+}
+
+
+/* ==========================================================
+   BOTÃO WHATSAPP DO MENU
+   ========================================================== */
+
+.botao-whatsapp {
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    padding: 11px 18px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+
+.botao-whatsapp:hover {
+
+    background-color: var(--laranja);
+
+    border-color: var(--laranja);
+}
+
+
+/* ==========================================================
+   PRIMEIRA SEÇÃO
+   ========================================================== */
+
+.hero
+ {
+
+    min-height: 590px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    /*
+       Por enquanto usamos um fundo elegante.
+
+       Depois podemos colocar uma foto REAL
+       de um projeto da marcenaria aqui.
+    */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.92),
+            rgba(0,0,0,0.65)
+        ),
+        linear-gradient(
+            135deg,
+            var(--marrom),
+            var(--cinza)
+        );
+}
+
+
+.hero-conteudo {
+
+    max-width: 700px;
+
+    color: white;
+}
+
+
+/* Pequeno texto */
+
+.etiqueta {
+
+    color: var(--laranja);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* Título principal */
+
+.hero h1 {
+
+    margin-top: 15px;
+
+    margin-bottom: 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    line-height: 1.1;
+
+    font-weight: normal;
+}
+
+
+.hero h1 strong {
+
+    font-weight: bold;
+}
+
+
+/* Texto abaixo do título */
+
+.hero p {
+
+    max-width: 600px;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   BOTÕES DA PRIMEIRA SEÇÃO
+   ========================================================== */
+
+.hero-botoes {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Botão geral */
+
+.botao {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 23px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+
+/* Botão laranja */
+
+.botao.principal {
+
+    background-color: var(--laranja);
+
+    color: white;
+}
+
+
+.botao.principal:hover {
+
+    transform: translateY(-2px);
+
+    filter: brightness(0.90);
+}
+
+
+/* Botão transparente */
+
+.botao.secundario {
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    color: white;
+}
+
+
+.botao.secundario:hover {
+
+    background-color: white;
+
+    color: black;
+}
+
+
+/* ==========================================================
+   SEÇÕES
+   ========================================================== */
+
+.secao {
+
+    padding: 90px 8%;
+}
+
+
+/* ==========================================================
+   TÍTULOS DAS SEÇÕES
+   ========================================================== */
+
+.titulo-secao {
+
+    margin-bottom: 42px;
+}
+
+
+.titulo-secao span {
+
+    color: var(--laranja);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.titulo-secao h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+
+    line-height: 1.1;
+
+    margin-top: 7px;
+
+    color: var(--marrom);
+}
+
+
+/* Título centralizado */
+
+.centralizado {
+
+    text-align: 1px;
+}
+
+
+.centralizado p {
+
+    color: var(--cinza);
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================================
+   SOBRE NÓS
+   ========================================================== */
+
+.sobre {
+
+    background-color: var(--fundo);
+}
+
+
+.sobre-grid {
+
+    display: grid;
+
+    grid-template-columns: 330px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Caixa dos 14 anos */
+
+.experiencia {
+
+    min-height: 300px;
+
+    background-color: var(--marrom);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow: 0 16px 45px rgba(0,0,0,0.10);
+}
+
+
+.experiencia strong {
+
+    color: var(--laranja);
+
+    font-family: Georgia, serif;
+
+    font-size: 110px;
+
+    line-height: 0.9;
+}
+
+
+.experiencia span {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Texto */
+
+.sobre-texto {
+
+    max-width: 700px;
+}
+
+
+.sobre-texto h3 {
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+
+.sobre-texto p {
+
+    color: var(--cinza);
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================
+   CARDS DE SERVIÇOS
+   ========================================================== */
+
+.servicos {
+
+    background-color: white;
+}
+
+
+.cards-servicos {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.card-servico {
+
+    padding: 35px;
+
+    border: 1px solid var(--cinza-claro);
+
+    background-color: white;
+
+    transition: 0.3s;
+}
+
+
+/* Efeito quando passa o mouse */
+
+.card-servico:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 16px 45px rgba(0,0,0,0.10);
+
+    border-color: var(--laranja);
+}
+
+
+.numero {
+
+    color: var(--laranja);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    display: block;
+
+    margin-bottom: 30px;
+}
+
+
+.card-servico h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+
+.card-servico p {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+}
+
+
+/* Botão central */
+
+.botao-centralizado {
+
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+
+/* Botão preto */
+
+.botao-preto {
+
+    background-color: var(--preto);
+
+    color: white;
+}
+
+
+.botao-preto:hover {
+
+    background-color: var(--marrom);
+}
+
+
+/* ==========================================================
+   LOCALIZAÇÃO
+   ========================================================== */
+
+.localizacao {
+
+    background-color: var(--fundo);
+}
+
+
+.localizacao-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.75fr;
+
+    min-height: 430px;
+
+    background-color: white;
+
+    box-shadow: 0 16px 45px rgba(0,0,0,0.10);
+}
+
+
+/* Área onde ficará o mapa */
+
+.mapa {
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: var(--cinza);
+
+    /*
+       Fundo provisório simulando mapa.
+    */
+
+    background-color: #eeeeee;
+
+    background-image:
+        linear-gradient(
+            rgba(115,115,115,0.10) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(115,115,115,0.10) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+}
+
+
+.mapa-conteudo h3 {
+
+    margin-top: 5px;
+}
+
+
+.mapa-conteudo p {
+
+    font-size: 14px;
+}
+
+
+.icone-mapa {
+
+    color: var(--laranja);
+
+    font-size: 42px;
+}
+
+
+/* Informações */
+
+.informacoes {
+
+    padding: 55px 45px;
+}
+
+
+.informacoes h3 {
+
+    font-size: 28px;
+
+    margin: 10px 0 25px;
+}
+
+
+.informacao {
+
+    border-top: 1px solid var(--cinza-claro);
+
+    padding: 16px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.informacao strong {
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: var(--marrom);
+}
+
+
+.informacao span {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   WHATSAPP FLUTUANTE
+   ========================================================== */
+
+.whatsapp-flutuante {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 200;
+
+    background-color: #1cae55;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.22);
+
+    transition: 0.3s;
+}
+
+
+.whatsapp-flutuante:hover {
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+
+.rodape {
+
+    background-color: var(--preto);
+
+    color: white;
+
+    padding: 65px 8% 25px;
+}
+
+
+.rodape-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+
+/* Logo do rodapé */
+
+.logo-rodape {
+
+    width: 210px;
+
+    max-height: 65px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+
+.rodape p,
+.rodape span {
+
+    color: rgba(255,255,255,0.62);
+
+    font-size: 13px;
+}
+
+
+.rodape h4 {
+
+    color: var(--laranja);
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.rodape a {
+
+    display: block;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 13px;
+
+    margin: 8px 0;
+}
+
+
+.rodape a:hover {
+
+    color: var(--laranja);
+}
+
+
+/* ==========================================================
+   PARTE FINAL DO RODAPÉ
+   ========================================================== */
+
+.rodape-final {
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    padding-top: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+/*
+   Quando a tela ficar menor, como em um celular,
+   o layout vai se adaptar.
+*/
+
+@media (max-width: 850px) {
+
+    .header {
+
+        flex-wrap: wrap;
+
+        padding: 12px 5%;
+    }
+
+
+    .logo {
+
+        width: 100%;
+    }
+
+
+    .logo img {
+
+        width: 190px;
+    }
+
+
+    .menu {
+
+        width: 100%;
+
+        gap: 20px;
+
+        overflow-x: auto;
+    }
+
+
+    .sobre-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .localizacao-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .cards-servicos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .mapa {
+
+        min-height: 300px;
+    }
+
+
+    .rodape-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ==========================================================
+   CELULAR PEQUENO
+   ========================================================== */
+
+@media (max-width: 520px) {
+
+    .secao {
+
+        padding: 65px 6%;
+    }
+
+
+    .hero {
+
+        min-height: 560px;
+
+        padding: 60px 6%;
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .hero-botoes .botao {
+
+        width: 100%;
+    }
+
+
+    .rodape-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .whatsapp-flutuante {
+
+        right: 15px;
+
+        bottom: 15px;
+    }
+}
+
+
+/*comeco da pagina porfifolio*/
+/* =========================================================
+   PORTFÓLIO RAFÁ MOBILE
+   Layout pensado primeiro para celular
+   ========================================================= */
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.portfolio-topo {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 15px 6% 55px;
+}
+
+
+/* Botão pequeno no canto superior */
+
+.voltar-inicio {
+    display: inline-block;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.voltar-inicio:hover {
+    color: var(--laranja);
+}
+
+
+/* Logo */
+
+.portfolio-logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.portfolio-logo img {
+    width: 190px;
+    max-width: 80%;
+    height: auto;
+}
+
+
+/* Apresentação */
+
+.portfolio-apresentacao {
+    text-align: center;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.portfolio-apresentacao > span {
+    color: var(--laranja);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.portfolio-apresentacao h1 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+    line-height: 1.2;
+
+    font-weight: normal;
+
+    margin: 12px 0 18px;
+}
+
+.portfolio-apresentacao p {
+    color: rgba(255,255,255,0.72);
+
+    font-size: 7px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.portfolio-categorias {
+    background-color: var(--fundo-claro);
+
+    padding: 35px 6%;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+
+.titulo-categoria {
+    display: block;
+
+    color: var(--laranja);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.botoes-categorias {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+
+.botoes-categorias a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--marrom);
+
+    color: var(--marrom);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+
+.botoes-categorias a:hover {
+    background-color: var(--laranja);
+
+    border-color: var(--laranja);
+
+    color: var(--branco);
+}
+
+
+/* =========================================================
+   CATEGORIAS / AMBIENTES
+   ========================================================= */
+
+.portfolio-categoria {
+    padding: 65px 6%;
+
+    /* Faz o clique da categoria parar no lugar certo */
+    scroll-margin-top: 20px;
+}
+
+
+/* Fundo alternado entre as categorias */
+
+.portfolio-categoria:nth-of-type(even) {
+    background-color: var(--fundo-claro);
+}
+
+
+/* Título do ambiente */
+
+.titulo-ambiente {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.titulo-ambiente span {
+    color: var(--laranja);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.titulo-ambiente h2 {
+    color: var(--marrom);
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    line-height: 1.1;
+
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   LISTA DOS PROJETOS
+   ========================================================= */
+
+.projetos-grid {
+
+    /*
+       No celular:
+       um projeto por vez.
+    */
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARTÃO DO PROJETO
+   ========================================================= */
+
+.projeto {
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--cinza-claro);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
+
+.imagem-projeto {
+    width: 100%;
+
+    background-color: var(--fundo);
+}
+
+
+/* Texto PROJETO / EXECUTADO */
+
+.imagem-projeto > span {
+    display: block;
+
+    padding: 10px 15px 8px;
+
+    color: var(--marrom);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background-color: var(--fundo);
+}
+
+
+/*
+   A imagem ocupa toda a largura disponível.
+
+   Você pode colocar uma imagem maior ou menor.
+   O site adapta automaticamente.
+*/
+
+.imagem-projeto img {
+
+    display: block;
+
+    width: 100%;
+
+    /*
+       Mantém todas as imagens com proporção igual.
+    */
+
+    aspect-ratio: 4 / 3;
+
+    /*
+       Faz a imagem preencher o espaço
+       sem deformar.
+    */
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   TEXTO DO PROJETO
+   ========================================================= */
+
+.projeto-conteudo {
+
+    padding: 22px 20px 25px;
+}
+
+
+.projeto-conteudo h3 {
+
+    color: var(--preto);
+
+    font-size: 18px;
+
+    margin-bottom: 9px;
+}
+
+
+.projeto-conteudo p {
+
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   BOTÃO DO WHATSAPP / ORÇAMENTO
+   ========================================================= */
+
+.botao-projeto {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    background-color: var(--laranja);
+
+    color: var(--branco);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+
+.botao-projeto:hover {
+
+    background-color: var(--marrom);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   COMPUTADOR
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+    .portfolio-topo {
+
+        padding: 20px 8% 70px;
+    }
+
+
+    .portfolio-logo img {
+
+        width: 220px;
+    }
+
+
+    .portfolio-apresentacao h1 {
+
+        font-size: 45px;
+    }
+
+
+    .portfolio-categoria {
+
+        padding: 90px 8%;
+    }
+
+
+    /*
+       No computador, os projetos ficam
+       dois lado a lado.
+    */
+
+    .projetos-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 1100px;
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .portfolio-apresentacao h1 {
+
+        font-size: 28px;
+    }
+
+
+    .botoes-categorias a {
+
+        width: 100%;
+    }
+
+}
+/* ==============================
+   MENU SUSPENSO DO PORTFÓLIO
+   ============================== */
+
+/* Área que segura o botão Portfólio e o submenu */
+.menu-dropdown {
+    position: relative;
+}
+
+/* Esconde as opções inicialmente */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--preto);
+    min-width: 160px;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+/* Faz as opções aparecerem ao passar o mouse */
+.menu-dropdown:hover .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Aparência de cada opção */
+.submenu a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Quando passar o mouse em uma opção */
+.submenu a:hover {
+    background-color: var(--laranja);
+}
+
+/* =========================================
+   FOTOS DE FUNDO SOMENTE NO HERO
+   ========================================= */
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("imagens/cozinha-01-executado.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    animation: trocar-fundo-hero 20s infinite;
+}
+
+
+/* =========================================
+   TROCA AUTOMÁTICA DAS FOTOS
+   ========================================= */
+
+@keyframes trocar-fundo-hero {
+
+    0%, 24% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url("capa1.jpeg");
+    }
+
+    25%, 49% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url("capa2.jpeg");}
+
+    50%, 74% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url("capa3.jpeg");
+    }
+
+    75%, 100% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+            url("capa4.jpeg");
+    }
+
+}
+/* FOTO DE FUNDO DO HERO */
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("capa1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* =====================================================
+   PÁGINA DE SERVIÇOS
+===================================================== */
+
+
+/* Área principal da página */
+.pagina-servicos {
+    background-color: var(--fundo-claro);
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   BOTÃO VOLTAR AO INÍCIO
+===================================================== */
+
+.voltar-inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 30px 0;
+}
+
+.voltar-inicio a {
+    color: var(--marrom);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.voltar-inicio a:hover {
+    color: var(--laranja);
+}
+
+
+/* =====================================================
+   TÍTULO DA PÁGINA
+===================================================== */
+
+.titulo-servicos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 30px 50px;
+    text-align: center;
+}
+
+.titulo-servicos span {
+    color: var(--laranja);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-servicos h1 {
+    margin: 12px 0 15px;
+    font-size: 42px;
+    color: var(--preto);
+}
+
+.titulo-servicos p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   LISTA DOS SERVIÇOS
+===================================================== */
+
+.lista-servicos {
+    width: 100%;
+}
+
+
+/* Cada serviço */
+.servico-bloco {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 420px;
+
+    margin: 0 auto 70px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   IMAGEM
+===================================================== */
+
+.servico-imagem {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.servico-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.servico-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    background-color: var(--branco);
+}
+
+.servico-texto span {
+    color: var(--laranja);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.servico-texto h2 {
+    margin: 12px 0 18px;
+
+    font-size: 32px;
+    color: var(--preto);
+}
+
+.servico-texto p {
+    margin: 0;
+
+    max-width: 480px;
+
+    color: var(--cinza);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   INVERTER O LADO DA IMAGEM
+
+   Nos serviços com a classe "invertido",
+   o texto fica primeiro e a imagem depois.
+===================================================== */
+
+.servico-bloco.invertido {
+    direction: rtl;
+}
+
+.servico-bloco.invertido .servico-texto,
+.servico-bloco.invertido .servico-imagem {
+    direction: ltr;
+}
+
+
+/* =====================================================
+   ÁREA DO BOTÃO FINAL
+===================================================== */
+
+.servico-contato {
+    max-width: 900px;
+
+    margin: 20px auto 0;
+
+    padding: 80px 30px;
+
+    text-align: center;
+}
+
+.servico-contato h2 {
+    margin: 0 0 15px;
+
+    font-size: 32px;
+    color: var(--preto);
+}
+
+.servico-contato p {
+    margin: 0 0 30px;
+
+    color: var(--cinza);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho menor no celular */
+    .header {
+        padding: 12px 18px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .botao-whatsapp {
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+    }
+
+
+    /* Voltar */
+    .voltar-inicio {
+        padding: 20px 20px 0;
+    }
+
+
+    /* Título */
+    .titulo-servicos {
+        padding: 45px 20px 40px;
+    }
+
+    .titulo-servicos h1 {
+        font-size: 32px;
+    }
+
+    .titulo-servicos p {
+        font-size: 15px;
+    }
+
+
+    /* Serviços passam para uma coluna */
+    .servico-bloco,
+    .servico-bloco.invertido {
+
+        display: grid;
+
+        grid-template-columns:1fr 1fr;
+
+        width: 100%;
+
+        margin-bottom: 45px;
+
+        direction: ltr;
+    }
+
+
+    /* Imagem */
+    .servico-imagem {
+        height: 250px;
+    }
+
+
+    /* Texto */
+    .servico-texto {
+        padding: 35px 25px;
+    }
+
+    .servico-texto h2 {
+        font-size: 26px;
+    }
+
+    .servico-texto p {
+        font-size: 15px;
+    }
+
+
+    /* Botão final */
+    .servico-contato {
+        padding: 60px 20px;
+    }
+
+    .servico-contato h2 {
+        font-size: 26px;
+    }
+
+}
+/* =========================================
+   INSTAGRAM AO LADO DA LOGO
+========================================= */
+
+.instagram {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    margin-left: 18px;
+
+    transition: 0.3s;
+}
+
+.instagram span {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.instagram:hover {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+/* =========================================
+   AJUSTE DO CABEÇALHO NO CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Diminui a altura do cabeçalho */
+    .header {
+        min-height: auto;
+        padding: 10px 18px 15px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    /* Logo + Instagram ficam lado a lado */
+    .logo-area {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    /* Diminui um pouco a logo */
+    .logo img {
+        width: 155px;
+        height: auto;
+    }
+
+
+    /* Ícone do Instagram */
+    .instagram {
+        width: 38px;
+        height: 38px;
+
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+
+    .instagram-icone {
+        font-size: 26px;
+    }
+
+
+    /* Menu fica embaixo da logo */
+    .menu {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        gap: 18px;
+
+        margin-top: 15px;
+    }
+
+}
+/* =========================================
+   CABEÇALHO NO CELULAR - AJUSTE FINAL
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Deixa o cabeçalho mais compacto */
+    .header {
+        min-height: 0;
+        height: auto;
+
+        padding: 12px 20px 14px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    /* LOGO + INSTAGRAM NA MESMA LINHA */
+    .logo-area {
+        width: 100%;
+        height: 65px;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 14px;
+    }
+
+
+    /* Tamanho da logo */
+    .logo img {
+        width: 175px;
+        height: auto;
+    }
+
+
+    /* Ícone do Instagram */
+    .instagram {
+        width: 38px;
+        height: 38px;
+
+        margin: 0 !important;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .instagram-icone {
+        font-size: 25px;
+    }
+
+
+    /* MENU */
+    .menu {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        margin-top: 10px;
+    }
+
+
+    /* Textos do menu */
+    .menu > a,
+    .menu-dropdown > a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    /* Botão WhatsApp */
+    .menu .botao-whatsapp {
+        padding: 9px 13px !important;
+        font-size: 13px !important;
+    }
+
+}
+/* =========================================
+   BOTÃO DO SOM
+   ========================================= */
+
+.botao-som {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    opacity: 0.75;
+}
+
+/* Quando passar o mouse por cima */
+.botao-som:hover {
+    background-color: #F75E00;
+    opacity: 1;
+}
+/* ÍCONE REAL DO INSTAGRAM */
+.instagram-svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* BANDEIRA DO BRASIL */
+.bandeira-brasil {
+    font-size: 25px;
+    line-height: 1;
+}
+/* ==========================================================
+   MENU HAMBÚRGUER
+   ========================================================== */
+
+/* Botão escondido no computador */
+.botao-menu {
+    display: none;
+}
+
+
+/* ==========================================================
+   MENU NO CELULAR
+   ========================================================== */
+
+@media (max-width: 850px) {
+
+    /* Botão ☰ */
+    .botao-menu {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        color: #FFFFFF;
+
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+
+        font-size: 24px;
+        cursor: pointer;
+
+        position: absolute;
+        right: 5%;
+        top: 20px;
+
+        z-index: 1000;
+    }
+
+
+    /* Menu fechado */
+    .menu {
+        display: none;
+    }
+
+
+    /* Menu aberto */
+    .menu.menu-aberto {
+        display: flex;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 18px;
+
+        padding-top: 20px;
+    }
+
+}
+@media (max-width: 850px) {
+
+    .logo-area {
+        padding-right: 65px !important;
+    }
+
+}
+@media (max-width: 850px) {
+
+    .logo {
+        transform: translateX(-15px);
+    }
+
+}
+/* =========================================================
+   PORTFÓLIO - AJUSTE DO CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =========================================
+       PARTE PRETA DO PORTFÓLIO
+       ========================================= */
+
+    .portfolio-topo {
+        padding: 12px 6% 28px;
+    }
+
+
+    /* =========================================
+       BOTÃO VOLTAR
+       Pequeno e discreto
+       ========================================= */
+
+    .portfolio-topo .voltar-inicio {
+        display: block;
+
+        color: rgba(255,255,255,0.65);
+
+        font-size: 11px;
+        font-weight: 500;
+
+        margin: 0 0 38px 0;
+
+        padding: 0;
+
+        text-align: left;
+    }
+
+
+    .portfolio-topo .voltar-inicio:hover {
+        color: var(--laranja);
+    }
+
+
+    /* =========================================
+       ESCONDE A LOGO NO CELULAR
+       ========================================= */
+
+    .portfolio-logo {
+        display: none;
+    }
+
+
+    /* =========================================
+       APRESENTAÇÃO
+       ========================================= */
+
+    .portfolio-apresentacao {
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    /* Palavra PORTFÓLIO
+       fica pequena, só como identificação */
+
+    .portfolio-apresentacao > span {
+        display: block;
+
+        color: var(--laranja);
+
+        font-size: 10px;
+
+        font-weight: bold;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 13px;
+    }
+
+
+    /* =========================================
+       FRASE PRINCIPAL
+       ========================================= */
+
+    .portfolio-apresentacao h1 {
+        font-family: Georgia, serif;
+
+        font-size: 28px;
+
+        line-height: 1.18;
+
+        font-weight: normal;
+
+        margin: 0;
+    }
+
+
+    /* =========================================
+       ESCONDE O TEXTO DE APRESENTAÇÃO
+       ========================================= */
+
+    .portfolio-apresentacao p {
+        display: none;
+    }
+
+
+    /* =========================================
+       CATEGORIAS
+       VOLTAM PARA A ÁREA CLARA
+       ========================================= */
+
+    .portfolio-categorias {
+        background-color: var(--fundo-claro);
+
+        padding: 30px 6% 35px;
+
+        border-bottom: 1px solid var(--cinza-claro);
+
+        text-align: center;
+    }
+
+
+    /* Título CATEGORIAS */
+
+    .titulo-categoria {
+        display: block;
+
+        color: var(--laranja);
+
+        font-size: 11px;
+
+        font-weight: bold;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* =========================================
+       BOTÕES
+       ========================================= */
+
+    .botoes-categorias {
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+
+    .botoes-categorias a {
+        min-height: 42px;
+
+        padding: 0 16px;
+
+        background-color: var(--branco);
+
+        border: 1px solid var(--marrom);
+
+        color: var(--marrom);
+
+        font-size: 12px;
+
+        font-weight: bold;
+
+        border-radius: 2px;
+    }
+
+}
+/* AJUSTE DO TOPO DO PORTFÓLIO NO CELULAR */
+@media (max-width: 700px) {
+
+    /* Diminui a altura da parte preta */
+    .portfolio-topo {
+        padding: 10px 1% 25px;
+    }
+
+    /* Texto "PORTFÓLIO" */
+    .portfolio-apresentacao > span {
+        font-size: 8px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    /* Título principal */
+    .portfolio-apresentacao h1 {
+        font-size: 15px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    /* Esconde o texto comprido no celular */
+    .portfolio-apresentacao p {
+        display: none;
+    }
+
+    /* Espaço do "Voltar ao início" */
+    .portfolio-topo .voltar-inicio {
+        margin-bottom: 25px;
+        font-size: 8px;
+    }
+
+}
