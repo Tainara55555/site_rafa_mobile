@@ -2588,3 +2588,11 @@ a {
     }
 
 }
+
+/* Limita a largura máxima no computador e centraliza na tela */
+body {
+  max-width: 480px; /* Largura padrão de celular */
+  margin: 0 auto;  /* Centraliza a página na tela */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombreamento suave nas laterais (opcional) */
+  min-height: 100vh;
+}
