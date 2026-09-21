@@ -2644,3 +2644,29 @@ a {
     }
 
 }
+
+/* =========================================================
+   PORTFÓLIO - AJUSTE DO TOPO NO COMPUTADOR
+   NÃO ALTERA O CELULAR
+========================================================= */
+
+@media (min-width: 701px) {
+
+    .portfolio-topo {
+        padding: 15px 8% 35px;
+    }
+
+    .portfolio-logo {
+        margin-bottom: 20px;
+    }
+
+    .portfolio-logo img {
+        width: 200px;
+    }
+
+    .portfolio-apresentacao h1 {
+        font-size: 38px;
+        margin: 8px 0 10px;
+    }
+
+}
