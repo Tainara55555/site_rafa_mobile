@@ -2634,3 +2634,36 @@ a {
     }
 
 }
+
+/* ==========================================================
+   PORTFÓLIO - FOTOS LADO A LADO NO COMPUTADOR
+   NÃO ALTERA O CELULAR
+========================================================== */
+
+@media (min-width: 700px) {
+
+    .projetos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .projeto {
+        display: contents;
+    }
+
+    .imagem-projeto {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .imagem-projeto img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+    }
+
+}
