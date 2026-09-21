@@ -2588,3 +2588,59 @@ a {
     }
 
 }
+
+/* ==========================================================
+   AJUSTES DO CABEÇALHO - SOMENTE COMPUTADOR
+   O CELULAR NÃO SERÁ ALTERADO
+========================================================== */
+
+@media (min-width: 851px) {
+
+    /* AUMENTA UM POUQUINHO A LOGO */
+    .logo img {
+        width: 230px;
+    }
+
+    /* LOGO + BANDEIRA FICAM JUNTAS NO LADO ESQUERDO */
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-right: 0;
+    }
+
+    /* BANDEIRA DO BRASIL */
+    .bandeira-brasil {
+        font-size: 25px;
+        line-height: 1;
+    }
+
+    /* MENU VAI PARA O CANTO DIREITO */
+    .menu {
+        margin-left: auto;
+        margin-right: 0;
+        gap: 35px;
+        align-items: center;
+    }
+
+    /* AUMENTA UM POUQUINHO A LETRA DO MENU */
+    .menu > a,
+    .menu-dropdown > a {
+        font-size: 16px;
+    }
+
+    /* INSTAGRAM VAI PARA O LADO DIREITO,
+       JUNTO DO MENU */
+    .instagram {
+        margin-left: 0;
+        margin-right: 0;
+        width: 42px;
+        height: 42px;
+    }
+
+    /* ORGANIZA O INSTAGRAM JUNTO AO MENU */
+    .header {
+        gap: 28px;
+    }
+
+}
