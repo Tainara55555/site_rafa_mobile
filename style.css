@@ -2667,3 +2667,225 @@ a {
     }
 
 }
+
+/* =========================================================
+   AJUSTES FINAIS DO SITE - COMPUTADOR
+   NÃO ALTERA O CELULAR
+========================================================= */
+
+@media (min-width: 851px) {
+
+    /* =====================================================
+       CABEÇALHO
+    ===================================================== */
+
+    .header {
+        min-height: 95px;
+        padding: 12px 6%;
+        gap: 22px;
+    }
+
+
+    /* Permite organizar logo, bandeira, menu e Instagram
+       diretamente dentro do cabeçalho */
+    .logo-area {
+        display: contents;
+    }
+
+
+    /* =====================================================
+       LOGO MAIOR
+    ===================================================== */
+
+    .logo {
+        order: 1;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 220px;
+        max-height: 78px;
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       BANDEIRA DO BRASIL
+       Fica ao lado da logo
+    ===================================================== */
+
+    .bandeira-brasil {
+        order: 2;
+
+        font-size: 22px;
+        line-height: 1;
+
+        display: flex;
+        align-items: center;
+
+        margin-right: 8px;
+    }
+
+
+    /* =====================================================
+       MENU NO CANTO DIREITO
+    ===================================================== */
+
+    .menu {
+        order: 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 26px;
+
+        width: auto;
+    }
+
+
+    .menu a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       INSTAGRAM JUNTO DO MENU
+    ===================================================== */
+
+    .instagram {
+        order: 4;
+
+        width: 40px;
+        height: 40px;
+
+        margin-left: 2px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    .instagram-svg {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    /* =====================================================
+       FOTO PRINCIPAL MAIS ALTA
+    ===================================================== */
+
+    .hero {
+        min-height: calc(100vh - 105px);
+
+        padding: 80px 8%;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* =====================================================
+       BOTÕES DO HERO MAIORES
+    ===================================================== */
+
+    .hero-botoes {
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+
+    .hero-botoes .botao {
+        min-height: 54px;
+
+        padding: 0 30px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================================
+   AJUSTE DA LOGO E BANDEIRA - COMPUTADOR
+========================================================= */
+
+@media (min-width: 851px) {
+
+    .logo img {
+        width: 240px !important;
+        max-width: none !important;
+        max-height: 85px !important;
+        height: auto !important;
+    }
+
+    .bandeira-brasil {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 22px !important;
+        line-height: 1;
+
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+}
+/* ==========================================================
+   AJUSTE FINAL DO HERO - COMPUTADOR
+   ========================================================== */
+
+@media (min-width: 851px) {
+
+    /* --------------------------------------------------
+       LOGO DA RAFÁ MOBILE
+       -------------------------------------------------- */
+
+    .logo img {
+        width: 250px !important;
+        max-width: 250px !important;
+        max-height: 85px !important;
+        height: auto !important;
+        object-fit: contain;
+    }
+
+
+    /* --------------------------------------------------
+       FUNDO / FOTO PRINCIPAL
+       Preenche melhor a altura da tela
+       -------------------------------------------------- */
+
+    .hero {
+        min-height: calc(100vh - 105px);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* --------------------------------------------------
+       TÍTULO PRINCIPAL
+       -------------------------------------------------- */
+
+    .hero h1 {
+        font-size: clamp(40px, 4.2vw, 58px);
+        line-height: 1.08;
+    }
+
+
+    /* --------------------------------------------------
+       BOTÕES
+       -------------------------------------------------- */
+
+    .hero-botoes .botao {
+        min-height: 55px;
+        padding: 0 30px;
+        font-size: 14px;
+    }
+
+}
